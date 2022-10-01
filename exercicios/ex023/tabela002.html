@@ -21,14 +21,24 @@
             background-color: gray;
             color: white;
         }
+        tbody > tr:nth-child(2n){ /*posso usar ODD ou EVEN (ímpar ou par)*/
+            background-color: rgba(211, 211, 211, 0.555);
+        }
         td.num{
             text-align: right;
+        }
+        caption{
+            font-size: 1.6em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
     </style>
 </head>
 <body>
     <!--Anatomia para tabelas grandes
     TABLE
+        CAPTION (legenda)
         THEAD
             TR, TD, TH
         TBODY
@@ -37,10 +47,11 @@
             TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px">População</th>
             </tr>
         </thead>
         <tbody>
@@ -155,7 +166,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>213.317.639</strong></td>
             </tr>
         </tfoot>
