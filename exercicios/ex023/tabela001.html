@@ -11,17 +11,18 @@
         }
         table{
             width: 400px;
+            height: 400px;
             border-collapse: collapse;
         }
-        tr.linha{
-            background-color: gray;
-        }
+        
         td{
             border: 1px solid black;
             padding: 8px;
-        }
-        td.dado{
-            background-color: yellow;
+            text-align: center; /*alinhamento horizontal*/
+            vertical-align: middle; /*alinhamento vertical*/
+        } 
+        .numero{
+            text-align: right;
         }
     </style>
 </head>
@@ -35,7 +36,7 @@
     <table>
         <tr><!--Primeira linha-->
             <td>A1</td>
-            <td>B1</td>
+            <td class="numero">200</td>
             <td>C1</td>
         </tr>
         <tr class="linha"><!--Segunda linha // fechamento da tag não é obrigatório segundo o W3C (MAS É BOM USAR)-->
