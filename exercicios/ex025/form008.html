@@ -8,8 +8,23 @@
 </head>
 <body>
     <h1>Exemplo de formulário</h1>
-    <form action="cadastro.php">
-        
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="n1"> Primeiro número:</label>
+            <input type="number" name="n1" id="n1" required min="0" max="50" oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+        </p>
+        <p>
+            <label for="n2">Segundo número:</label>
+            <input type="number" name="n2" id="n2" required min="0" max="50" oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+        </p>
+        <p>
+            <label for="soma">A soma é:</label>
+            <output id="soma">0</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
     </form>
 </body>
 </html>
